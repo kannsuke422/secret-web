@@ -8,22 +8,53 @@
       background-color: #121212;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
       padding: 2em;
       text-align: center;
+      height: 200vh; /* 2画面分の高さを作る */
     }
     h1 {
       font-size: 2em;
       color: #00ffcc;
+      margin-top: 1em;
     }
     p {
       font-size: 1.2em;
       margin-top: 1em;
     }
+    .link {
+      margin-top: 60vh;
+    }
+    a {
+      color: #00ccff;
+      font-size: 1.1em;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>🔐 ようこそ、秘密のページへ</h1>
-  <p>ここまで辿り着けたあなたに、特別なメッセージを。</p>
-  <p>「真実は常に、表にあるとは限らない。」</p>
+  <div class="container">
+    <h1>🔐 ようこそ、秘密のページへ</h1>
+    <p>やるやん</p>
+
+    <div class="link" id="target">
+      <p>
+        <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/119599/1/34_1047.pdf" target="_blank">
+          ▶ このリンクを開く
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // 1秒後に下へスクロール（スムーズに）
+    setTimeout(() => {
+      document.getElementById("target").scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 1000);
+  </script>
 </body>
 </html>
